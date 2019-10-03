@@ -139,7 +139,7 @@
                     <p class="text-center">Mails Sent</p>
                 </div>
                 <div class="col-md-4">
-                    <div class="number text-center" data-count="8927">54%</div>
+                    <div class="number text-center" data-count="8927"></div>
                     <p class="text-center">Page Views</p>
                 </div>
             </div>
@@ -246,10 +246,10 @@
 
 <script>
     var followerRequest = new XMLHttpRequest();
-    followerRequest.open("GET", "https://www.instagram.com/web/search/topsearch/?query=srmkzilla", true);
+    followerRequest.open("GET", "https://www.instagram.com/srmkzilla/?__a=1", true);
     followerRequest.onload = function() {
         var instaJson = JSON.parse(followerRequest.responseText);
-        var totalFollowers = instaJson.users[0].user.follower_count;
+        var totalFollowers = instaJson.graphql.user.edge_followed_by.count;
         console.log(totalFollowers);
         document.getElementById("instagram-count").setAttribute("data-count", totalFollowers.toString())
         animateNumbers()
