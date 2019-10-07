@@ -7,7 +7,7 @@
 srmkzilla.net - v2
 </h1>
 <p align="center">
-The second iteration of <a href="https://srmkzila.net" target="_blank">srmkzilla.net</a> crafted with &hearts; by SRMKZILLA. 
+The second iteration of <a href="https://srmkzilla.net" target="_blank">srmkzilla.net</a> crafted with &hearts; by SRMKZILLA. 
 </p>
 <p align="center">
     <img src="https://img.shields.io/badge/author-SRMKZILLA-orange" alt="author SRMKZILLA"/>
