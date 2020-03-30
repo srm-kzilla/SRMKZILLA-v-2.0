@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <head>
     <meta charset="utf-8">
 
     <title>SRMKZILLA</title>
-    <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,7 +20,31 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light">
+    <a id='openScratch' class="kz-mozbar text-center">
+        <h3>MOZO<span id="Fest"></span> <span class="kz-fest">IS NIGH</span></h3>
+        <p>
+            <span class="d-md-none">Tap</span>
+            <span class="d-none d-md-inline">Click</span> here to earn a cool scratch card!
+        </p>
+    </a>
+
+    <div id='overlay'>
+        <div id="js-container">
+            <button class="btn btn-danger scratch-close" onclick="$('#overlay').css('display','none')">
+                Close &times;
+            </button>
+            <canvas id="js-canvas" width="400" height="400"></canvas>
+            <a id='routeTo' target="_blank"><img id='scratchImg' width=100%></a>
+            <p class="scratch-text" id='scratch-card-title'>Scratch the card!</p>
+        </div>
+    </div>
+
+    <!-- <div class="container-fluid kz-mozbanner">
+        <div class="container text-center">
+            <h1>MOZOFEST IS UPON US!!!</h1>
+        </div>
+    </div> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,10 +72,9 @@
         </div>
     </nav>
     <div class="icon-bar">
-        <a href="https://m.facebook.com/SRMKZILLA/?tsid=0.11722711608842484&source=result" class="facebook"><i
-                class="fa fa-facebook"></i></a>
-        <a href="https://twitter.com/SRMKZILLA_Club?s=08" class="twitter"><i class="fa fa-twitter"></i></a>
-        <a href="https://www.instagram.com/srmkzilla/" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="https://m.facebook.com/SRMKZILLA/?tsid=0.11722711608842484&source=result" class="kz1 facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/SRMKZILLA_Club?s=08" class="kz2 twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/srmkzilla/" class="kz3 instagram"><i class="fa fa-instagram"></i></a>
     </div>
     <section class="hero">
         <h1 class="title" id="shuffled">SRMKZILLA</h1>
@@ -67,9 +91,60 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="event-title text-center"><span>E</span>vents<span>.</span></div>
-                    <p class="event-para text-center">SRMKZILLA regularly organises workshops, technical talks and discussions, meetups to spread the message of the power of open source to fellow students. We also organize Mozofest - a free for all access fest where we call in speakers
+                    <p class="event-para text-center">SRMKZILLA regurlarly organises workshops, technical talks and discussions, meetups to spread the message of the power of open source to fellow students. We also organize Mozofest - a free for all access fest where we call in speakers
                         and experts from the community to teach about the latest developments in open source and we also organise games and coding events where people can test their skill.</p>
-                    <div class="event-carousel">
+                        
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c1.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c2.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c3.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c4.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c5.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c6.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c7.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c8.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c9.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c10.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c11.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c12.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c13.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c14.jpg">
+                              </a>
+                              <a class="swiper-slide" href="https://events.srmkzilla.net" target="_blank">
+                                <img src="./assets/img/events/c15.jpg">
+                              </a>  
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- <div class="event-carousel">
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -127,7 +202,7 @@
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -136,56 +211,87 @@
         </div>
 
     </section>
+
     <section class="kz-our-services">
-        <div class="container-fluid">
+        <div class="container-fluid kz-card-bg">
             <div class="row">
                 <div class="col-md-12">
                     <div class="event-title text-center"><span>S</span>ervices<span>.</span></div>
                     <p class="event-para text-center">We develop websites for different clubs and associations within our instituion. We also provide technical support.</p>
                 </div>
             </div>
-            <div class="row text-center">
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-card" id="kz_click_service_card">
-                        <img src="assets/img/project.png" />
-                        <h5 id="service-title">Projects</h5>
-                        <div id="service-content" class="kz-service-content">
-                            <h4>Projects</h4>
-                            <p>Every project is an opportunity to learn, to figure out problems and challenges, to invent and reinvent.</p>
-                            <a href="services.html"><button>Learn More</button></a>
+            <div class="row justify-content-center align-items-center">
+                <div class="col col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <div class="kz-card-width">
+                        <h3>Projects</h3>
+                        <img src="./assets/img/project.png" alt="Projects">
+                        <div class="kz-width-pop"></div>
+                        <div class="kz-blur">
+                            <img class="img-abs" src="./assets/img/project.png" alt="Projects">
+                        </div>
+                        <div class="kz-width-hover">
+                            <div class="container-fluid text-center">
+                                <h3>Projects</h3>
+                                <p>Every project is an opportunity to learn, to figure out problems 
+                                   and challenges, to invent and reinvent.
+                                </p>
+                                <a href="services.html">Know more...</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-card">
-                        <img src="assets/img/web-programming.png" />
-                        <h5 id="service-title">Web Development</h5>
-                        <div id="service-content" class="kz-service-content">
-                            <h4>Web Development</h4>
-                            <p>Websites promote you 24/7: No employee will do that.</p>
-                            <a href="services.html"><button>Learn More</button></a>
+                <div class="col col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <div class="kz-card-width">
+                        <h3 class="card-web">Web development</h3>
+                        <img src="./assets/img/web-programming.png" alt="Projects">
+                        <div class="kz-width-pop"></div>
+                        <div class="kz-blur">
+                            <img class="img-abs" src="./assets/img/web-programming.png" alt="Projects">
+                        </div>
+                        <div class="kz-width-hover">
+                            <div class="container-fluid text-center">
+                                <h3>Web development</h3>
+                                <p>Websites promote you 24/7: No employee will do that.
+                                </p>
+                                <a href="services.html">Know more...</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-card">
-                        <img src="assets/img/presentation.png" />
-                        <h5 id="service-title">Workshops</h5>
-                        <div id="service-content" class="kz-service-content">
-                            <h4>Workshops</h4>
-                            <p>Live as if you were to die tomorrow. Learn as if you were to live forever.</p>
-                            <a href="services.html"><button>Learn More</button></a>
+                <div class="w-100 d-xl-none d-md-block"></div>
+                <div class="col col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <div class="kz-card-width">
+                        <h3 class="card-work">Workshops</h3>
+                        <img src="./assets/img/presentation.png" alt="Projects">
+                        <div class="kz-width-pop"></div>
+                        <div class="kz-blur">
+                            <img class="img-abs" src="./assets/img/presentation.png" alt="Projects">
+                        </div>
+                        <div class="kz-width-hover">
+                            <div class="container-fluid text-center">
+                                <h3>Workshops</h3>
+                                <p>Live as if you were to die tomorrow. Learn as if you were to live forever.
+                                </p>
+                                <a href="services.html">Know more...</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="service-card">
-                        <img src="assets/img/training.png" />
-                        <h5 id="service-title">training</h5>
-                        <div id="service-content" class="kz-service-content">
-                            <h4>training</h4>
-                            <p>In learning you will teach, and in teaching you will learn.</p>
-                            <a href="services.html"><button>Learn More</button></a>
+                <div class="col col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <div class="kz-card-width">
+                        <h3>Training</h3>
+                        <img src="./assets/img/training.png" alt="Projects">
+                        <div class="kz-width-pop"></div>
+                        <div class="kz-blur">
+                            <img class="img-abs" src="./assets/img/training.png" alt="Projects">
+                        </div>
+                        <div class="kz-width-hover">
+                            <div class="container-fluid text-center">
+                                <h3>Training</h3>
+                                <p>In learning you will teach, and in teaching you will learn.
+                                </p>
+                                <a href="services.html">Know more...</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -216,10 +322,10 @@
                             <li>
                                 <h5>EXPLORE</h5>
                             </li>
-                            <li><span>Home</span></li>
-                            <li><span>Events</span></li>
-                            <li><span>Our Services</span></li>
-                            <li><span>Team</span></li>
+                            <li><a class="kz-explore-link" href="#"><span>Home</span></a></li>
+                            <li><a class="kz-explore-link" href= "https://events.srmkzilla.net/"><span>Events</span></a></li>
+                            <li><a class="kz-explore-link" href="services.html"><span>Our Services</span></a></li>
+                            <li><a class="kz-explore-link" href="us.html"><span>Team</span></a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 kz-contact">
@@ -263,6 +369,8 @@
     <script src="https://code.jquery.com/jquery-1.6.3.min.js"></script>
     <script src="jqueryscript.js"></script>
     <script src="jquery.shuffleLetters.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

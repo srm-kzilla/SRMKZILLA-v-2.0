@@ -1,0 +1,132 @@
+body {
+  padding: 0 7.5%;
+  overflow: hidden;
+}
+
+.navbar {
+  background-color: #f47621 !important;
+  color: #fff !important;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 13px !important;
+  text-transform: uppercase;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+}
+
+.nav-item a:hover span {
+  color: white;
+  padding-bottom: 13px;
+  border-bottom: 5px solid white;
+  transition: all 0.1s ease;
+}
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.icon-bar a {
+  display: block;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.facebook i:hover {
+  color: #3b5998;
+}
+
+.twitter i:hover {
+  color: #1da1f2;
+}
+
+.instagram i:hover {
+  color: #d43f5c;
+}
+
+@media (max-width: 576px) {
+  .icon-bar a {
+    padding: 10px;
+  }
+}
+
+.main-content {
+  padding: 7.5% 30%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.logo {
+  width: 50%;
+  margin-bottom: 3%;
+}
+
+@media (max-width: 500px) {
+  .logo {
+    width: 200px;
+  }
+}
+
+.kz-project {
+  text-align: center;
+  position: relative;
+  margin-top: 100px;
+  align-items: center;
+
+  overflow-y: hidden;
+
+  min-height: 100vh;
+}
+
+.kz-project img:first-child {
+  width: 240px;
+  height: auto;
+}
+
+.kz-project p {
+}
+
+.kz-project div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kz-project div a {
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.kz-project div a:first-child {
+  margin-right: 8px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+}
+
+.kz-project div a:nth-child(2) {
+  background-color: #f47621;
+}
+
+.kz-project img.kz-screen {
+  position: absolute;
+
+  object-fit: contain;
+  object-position: center;
+  height: auto;
+  left: 50%;
+  max-height: 72vh;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 100%;
+}
